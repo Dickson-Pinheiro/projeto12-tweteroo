@@ -63,7 +63,7 @@ app.get("/tweets", (request, response) => {
 
     if (page !== undefined) {
         if (pageAtual <= 0) {
-            return res.status(400).send("Informe uma página válida!")
+            return response.status(400).send("Informe uma página válida!")
         }
         if (pageAtual === 1) {
             tweetsRes.splice(10, tweetsRes.length - 10)
